@@ -56,23 +56,13 @@
         var statusadjuster = $('.building_list_fms').parent();
         for (var i = 0; i < statusadjuster.length; i++) {
             var classList = statusadjuster[i].firstElementChild.classList;
-            //console.log(statusadjuster[i]);
             if (classList.contains("building_list_fms_5")) {
                 console.log("blinky");
                 statusadjuster[i].setAttribute("style", "background-image: url(/images/fms5_background.gif); color: #fff;");
             }
             else {
                 statusadjuster[i].removeAttribute("style");
-                //console.log("no blinky");
             }
-
-
-           /* if (classList.contains("building_list_fms_5")) {
-console.log(status7[i].parent());
-                //status7[i].parent().css({'background-image':'url(/images/fms5_background.gif)'});
-            } else {
-                //status7[i].parent().removeAttr("style");
-            }*/
         }
     }
     var original_func = vehicleMarkerAdd;
@@ -81,6 +71,4 @@ console.log(status7[i].parent());
 
         initialize(e);
     }
-
-    // Your code here...
 })();
