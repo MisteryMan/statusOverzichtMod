@@ -1,51 +1,15 @@
 // ==UserScript==
 // @name         Status Overview Cosmetic Changes
 // @namespace    https://github.com/MisteryMan
-// @version      1.0
+// @version      1.1
 // @description  Expand the blinking alert marked of the status overview screen. This is to allow attracting more attention
 // @author       MisteryKid/AARC
-// @include      *://leitstellenspiel.de/*
-// @include      *://www.leitstellenspiel.de/*
-// @include      *://missionchief.co.uk/*
-// @include      *://www.missionchief.co.uk/*
-// @include      *://missionchief.com/*
-// @include      *://www.missionchief.com/*
-// @include      *://meldkamerspel.com/*
-// @include      *://www.meldkamerspel.com/*
-// @include      *://centro-de-mando.es/*
-// @include      *://www.centro-de-mando.es/*
-// @include      *://missionchief-australia.com/*
-// @include      *://www.missionchief-australia.com/*
-// @include      *://larmcentralen-spelet.se/*
-// @include      *://www.larmcentralen-spelet.se/*
-// @include      *://operatorratunkowy.pl/*
-// @include      *://www.operatorratunkowy.pl/*
-// @include      *://operatore112.it/*
-// @include      *://www.operatore112.it/*
-// @include      *://operateur112.fr/*
-// @include      *://www.operateur112.fr/*
-// @include      *://dispetcher112.ru/*
-// @include      *://www.dispetcher112.ru/*
-// @include      *://alarmcentral-spil.dk/*
-// @include      *://www.alarmcentral-spil.dk/*
-// @include      *://nodsentralspillet.com/*
-// @include      *://www.nodsentralspillet.com/*
-// @include      *://operacni-stredisko.cz/*
-// @include      *://www.operacni-stredisko.cz/*
-// @include      *://jogo-operador112.com/*
-// @include      *://www.jogo-operador112.com/*
-// @include      *://operador193.com/*
-// @include      *://www.operador193.com/*
-// @include      *://dyspetcher101-game.com/*
-// @include      *://www.dyspetcher101-game.com/*
-// @include      *://missionchief-japan.com/*
-// @include      *://www.missionchief-japan.com/*
-// @include      *://missionchief-korea.com/*
-// @include      *://www.missionchief-korea.com/*
-// @include      *://jocdispecerat112.com/*
-// @include      *://www.jocdispecerat112.com/*
-// @include      *://hatakeskuspeli.com/*
-// @include      *://www.hatakeskuspeli.com/*
+// @include      *://leitstellenspiel.de/leitstellenansicht
+// @include      *://www.leitstellenspiel.de/leitstellenansicht
+// @include      *://missionchief.com/leitstellenansicht
+// @include      *://www.missionchief.com/leitstellenansicht
+// @include      *://meldkamerspel.com/statusoverzicht
+// @include      *://www.meldkamerspel.com/statusoverzicht
 // @grant        none
 // ==/UserScript==
 
@@ -58,21 +22,13 @@
             var classList = statusadjuster[i].firstElementChild.classList;
             //console.log(statusadjuster[i]);
             if (classList.contains("building_list_fms_5")) {
-                console.log("blinky");
+                //console.log("blinky");
                 statusadjuster[i].setAttribute("style", "background-image: url(/images/fms5_background.gif); color: #fff;");
             }
             else {
                 statusadjuster[i].removeAttribute("style");
                 //console.log("no blinky");
             }
-
-
-           /* if (classList.contains("building_list_fms_5")) {
-console.log(status7[i].parent());
-                //status7[i].parent().css({'background-image':'url(/images/fms5_background.gif)'});
-            } else {
-                //status7[i].parent().removeAttr("style");
-            }*/
         }
     }
     var original_func = vehicleMarkerAdd;
@@ -82,5 +38,5 @@ console.log(status7[i].parent());
         initialize(e);
     }
 
-    // Your code here...
+
 })();
